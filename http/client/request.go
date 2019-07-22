@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func sendCustomRequest(url string) (*string, error) {
+func sendCustomRequest(method, url string) (*string, error) {
 	customHTTPMethod := "GET"
 	req, err := http.NewRequest(customHTTPMethod, url, nil)
 	//req.AddCookie()
